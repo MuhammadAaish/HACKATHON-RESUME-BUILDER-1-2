@@ -1,0 +1,160 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #000000;
+    line-height: 1.6;
+    background-image: url('background.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Resume Container */
+.resume-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(159, 192, 255, 0.9);
+    border: 2px solid #08007a;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+/* Hover Effect for Container */
+.resume-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Personal Information Section */
+.personal-info {
+    grid-column: 1 / -1;
+    border-bottom: 2px solid #d3e7ff;
+    padding-bottom: 20px;
+}
+
+/* Profile Picture */
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #001c3b;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0 auto 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Profile Picture Hover Effect */
+.profile-picture:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    background-color: #d3e7ff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+/* Hover Effect for Sections */
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styles */
+h2 {
+    color: #01254c;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Links Styling */
+a {
+    color: #267ad3;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Links Hover and Focus */
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
+/* Skills Section */
+.skills {
+    overflow: hidden;
+    max-height: 500px;
+    opacity: 1;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.skills.collapsed {
+    max-height: 0;
+    opacity: 0;
+}
+
+/* List Style */
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Hide/Show Button */
+button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px auto;
+    background-color: #003268;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Hover Effect */
+button:hover, button:focus {
+    background-color: #0056b3;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #003f8b;
+}
+
+/* Accessible Focus Styles */
+button:focus {
+    outline: 3px solid #0056b3;
+    outline-offset: 2px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .resume-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+}
